@@ -1,0 +1,126 @@
+[gd_scene load_steps=24 format=3 uid="uid://ber8lcdve6j2d"]
+
+[ext_resource type="Texture2D" uid="uid://17yv7jcxauv2" path="res://images/Background1.png" id="1_t53t3"]
+[ext_resource type="Texture2D" uid="uid://mb0tdfekr683" path="res://images/Ground.png" id="2_lo3do"]
+[ext_resource type="Texture2D" uid="uid://dgs6ir5hmkttb" path="res://images/Lawn.png" id="2_p410i"]
+[ext_resource type="PackedScene" uid="uid://cq40jegkuoax3" path="res://components/barry/barry.tscn" id="3_2ayke"]
+[ext_resource type="Texture2D" uid="uid://cr41so1nq21j4" path="res://images/GroundLeft.png" id="3_mn1f1"]
+[ext_resource type="Texture2D" uid="uid://dst7t83tqg10g" path="res://images/GroundRight.png" id="4_lumpn"]
+[ext_resource type="Texture2D" uid="uid://bf4mbmwm6yf2m" path="res://images/LawnLeft.png" id="6_vj00o"]
+[ext_resource type="Texture2D" uid="uid://bdquqcikj1gfk" path="res://images/LawnRight.png" id="7_sy5cp"]
+[ext_resource type="Texture2D" uid="uid://bdr55ffhtss8y" path="res://images/Wood.png" id="8_3khtq"]
+[ext_resource type="Texture2D" uid="uid://d03dwbw5obtb0" path="res://images/WoodLeft.png" id="9_v4618"]
+[ext_resource type="Texture2D" uid="uid://ctwk7lyp65vvh" path="res://images/WoodRight.png" id="10_31bs6"]
+[ext_resource type="Texture2D" uid="uid://cltaeba7qbdtn" path="res://images/Ladder.png" id="12_vb2y0"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_2mj4b"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y8t3d"]
+texture = ExtResource("2_lo3do")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i0g8k"]
+texture = ExtResource("3_mn1f1")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_owv46"]
+texture = ExtResource("4_lumpn")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 60, -64, 60, 64, -64, 64)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_24435"]
+texture = ExtResource("2_p410i")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -32, 64, -32, 64, 64, -64, 64)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1rl6l"]
+texture = ExtResource("6_vj00o")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-60, -32, 64, -32, 64, 64, -60, 64)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t42dd"]
+texture = ExtResource("7_sy5cp")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -32, 60, -32, 60, 64, -64, 64)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_riltq"]
+texture = ExtResource("8_3khtq")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -16, 32, -16, 32, 32, -32, 32)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gknyq"]
+texture = ExtResource("9_v4618")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -16, 32, -16, 32, 32, -32, 32)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j33qq"]
+texture = ExtResource("10_31bs6")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -16, 32, -16, 32, 32, -32, 32)
+
+[sub_resource type="TileSet" id="TileSet_3p1w1"]
+physics_layer_0/collision_layer = 1
+physics_layer_0/physics_material = SubResource("PhysicsMaterial_2mj4b")
+sources/0 = SubResource("TileSetAtlasSource_y8t3d")
+sources/1 = SubResource("TileSetAtlasSource_i0g8k")
+sources/2 = SubResource("TileSetAtlasSource_owv46")
+sources/3 = SubResource("TileSetAtlasSource_24435")
+sources/4 = SubResource("TileSetAtlasSource_1rl6l")
+sources/5 = SubResource("TileSetAtlasSource_t42dd")
+sources/6 = SubResource("TileSetAtlasSource_riltq")
+sources/7 = SubResource("TileSetAtlasSource_gknyq")
+sources/8 = SubResource("TileSetAtlasSource_j33qq")
+
+[node name="Level1" type="Node2D"]
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("1_t53t3")
+metadata/_edit_use_anchors_ = true
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2(-9, -8)
+tile_set = SubResource("TileSet_3p1w1")
+format = 2
+layer_0/tile_data = PackedInt32Array(2686980, 3, 0, 2686988, 3, 0, 2686996, 3, 0, 2687004, 3, 0, 2687012, 3, 0, 2687020, 3, 0, 2687028, 3, 0, 2687036, 3, 0, 2687044, 3, 0, 2687052, 3, 0, 1572942, 6, 0, 1572938, 6, 0, 1572934, 6, 0, 1572930, 6, 0, 1572926, 6, 0, 1572922, 6, 0, 1572918, 6, 0, 1572914, 6, 0, 1572910, 6, 0, 1572906, 7, 0, 524362, 8, 0, 524358, 6, 0, 524354, 6, 0, 524350, 6, 0, 524346, 6, 0, 524342, 6, 0, 524338, 6, 0, 524334, 6, 0, 524330, 6, 0, 524326, 6, 0, 524322, 6, 0, 524318, 6, 0, 524314, 6, 0, 524310, 6, 0, 524306, 7, 0, 1703938, 6, 0, 1703942, 6, 0, 1703946, 6, 0, 1703950, 6, 0, 1703954, 6, 0, 1703958, 8, 0)
+
+[node name="barry" parent="." instance=ExtResource("3_2ayke")]
+position = Vector2(228, 559)
+
+[node name="Ladder" type="Sprite2D" parent="."]
+position = Vector2(1037, 495)
+texture = ExtResource("12_vb2y0")
+
+[node name="Ladder2" type="Sprite2D" parent="."]
+position = Vector2(888, 240)
+texture = ExtResource("12_vb2y0")

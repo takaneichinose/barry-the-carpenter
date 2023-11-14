@@ -1,0 +1,118 @@
+[gd_scene load_steps=20 format=3 uid="uid://cq40jegkuoax3"]
+
+[ext_resource type="Texture2D" uid="uid://b4nxwi2vtlfgl" path="res://images/BarryClimb1.png" id="1_vmgcc"]
+[ext_resource type="Texture2D" uid="uid://wbya0oujqatt" path="res://images/BarryClimb2.png" id="2_ahgmv"]
+[ext_resource type="Texture2D" uid="uid://cd01kv66c6kgl" path="res://images/BarryClimb3.png" id="3_eohuc"]
+[ext_resource type="Texture2D" uid="uid://c2m0nn441eo58" path="res://images/BarryClimb4.png" id="4_5nj5j"]
+[ext_resource type="Texture2D" uid="uid://dsu4iqpa3vsr4" path="res://images/BarryClimbIdle1.png" id="5_u8bsj"]
+[ext_resource type="Texture2D" uid="uid://suja78jhiao7" path="res://images/BarryClimbIdle2.png" id="6_feqhd"]
+[ext_resource type="Texture2D" uid="uid://bwnr68ijpxa25" path="res://images/BarryClimbIdle3.png" id="7_d77av"]
+[ext_resource type="Texture2D" uid="uid://luix0ggatn6n" path="res://images/BarryFall1.png" id="8_ftovc"]
+[ext_resource type="Texture2D" uid="uid://deopf5w86cstp" path="res://images/BarryFall2.png" id="9_74c7o"]
+[ext_resource type="Texture2D" uid="uid://c10sf4dnxyk6a" path="res://images/BarryFall3.png" id="10_1w5ev"]
+[ext_resource type="Texture2D" uid="uid://dc58mpxpwuvl6" path="res://images/BarryIdle1.png" id="11_rcbij"]
+[ext_resource type="Texture2D" uid="uid://bujci3wwyrnrl" path="res://images/BarryIdle2.png" id="12_rbqjc"]
+[ext_resource type="Texture2D" uid="uid://byp6mn1jkhw76" path="res://images/BarryIdle3.png" id="13_07hpj"]
+[ext_resource type="Texture2D" uid="uid://ctgbhkmdpmdb1" path="res://images/BarryWalk2.png" id="14_ly0hd"]
+[ext_resource type="Texture2D" uid="uid://0tp828ueg0qa" path="res://images/BarryWalk1.png" id="15_mgn04"]
+[ext_resource type="Texture2D" uid="uid://bjkqdqvd4htds" path="res://images/BarryWalk4.png" id="16_aln5h"]
+[ext_resource type="Texture2D" uid="uid://tgol6mprk22q" path="res://images/BarryWalk3.png" id="17_ltixa"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_anewf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_vmgcc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ahgmv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_eohuc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5nj5j")
+}],
+"loop": true,
+"name": &"climb",
+"speed": 7.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_u8bsj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_feqhd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_d77av")
+}],
+"loop": true,
+"name": &"climb_idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_ftovc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_74c7o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_1w5ev")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_rcbij")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_rbqjc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_07hpj")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_ly0hd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_mgn04")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_aln5h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ltixa")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 7.5
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f5xdl"]
+size = Vector2(56, 128)
+
+[node name="barry" type="Node2D"]
+
+[node name="Tommy" type="RigidBody2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Tommy"]
+sprite_frames = SubResource("SpriteFrames_anewf")
+animation = &"fall"
+frame_progress = 0.0692842
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tommy"]
+position = Vector2(8, 0)
+shape = SubResource("RectangleShape2D_f5xdl")
+
+[node name="Camera2D" type="Camera2D" parent="Tommy"]
+limit_left = 0
+limit_bottom = 720

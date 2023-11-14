@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dtbkymkv7nr68"]
+
+[ext_resource type="Texture2D" uid="uid://cltaeba7qbdtn" path="res://images/Ladder.png" id="1_ua6g7"]
+
+[node name="ladder" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_ua6g7")
